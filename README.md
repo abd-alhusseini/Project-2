@@ -10,7 +10,6 @@ Key technologies implemented include VRRP for gateway redundancy, OSPF for dynam
 ---
 
 ## 2. IP Addressing and VLAN Plan
-The network is logically segmented using VLANs to isolate traffic and enhance security. A virtual IP (VIP) provided by VRRP serves as the redundant gateway for all devices.
 
 #### IP Addressing and Subnet Overview
 | Device / Interface                  | IP Address                       | Subnet Mask     | Default Gateway       |
@@ -140,7 +139,7 @@ Detailed packet-level inspection to confirm protocol compliance and health.
 
   - VRRP Packet Analysis: Verifying periodic advertisements and virtual MAC health.
 
-![](https://github.com/abd-alhusseini/Project-2/blob/main/Screenshots/Wireshark-VRRP.png)
+![](https://github.com/abd-alhusseini/Project-2/raw/main/Screenshots/Wireshark-VRRP.png)
 
 
 ## 6. Skills Demonstrated
