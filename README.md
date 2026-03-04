@@ -135,7 +135,7 @@ Detailed packet-level inspection to confirm protocol compliance and health.
 
   - OSPF Packet Analysis: Monitoring Hello packets and LSA exchanges.
     
-![](https://github.com/abd-alhusseini/Project-2/raw/main/Screenshots/wir-ospf.png)
+![](https://github.com/abd-alhusseini/Project-2/raw/main/Screenshots/wireshark-ospf.png)
 
   - VRRP Packet Analysis: Verifying periodic advertisements and virtual MAC health.
 
