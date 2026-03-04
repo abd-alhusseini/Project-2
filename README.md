@@ -7,6 +7,8 @@ Key technologies implemented include VRRP for gateway redundancy, OSPF for dynam
 
 ![Topology Diagram](https://github.com/abd-alhusseini/Project-2/raw/main/Screenshots/Topology.png)
 
+---
+
 ## 2. IP Addressing and VLAN Plan
 The network is logically segmented using VLANs to isolate traffic and enhance security. A virtual IP (VIP) provided by VRRP serves as the redundant gateway for all devices.
 
@@ -36,22 +38,29 @@ The network is logically segmented using VLANs to isolate traffic and enhance se
 | 99      | Management | 10.90.99.1                 | 10.90.99.2         | 10.90.99.3         | SW1, SW2, SW3, SW4 | SW1, SW2, SW3, SW4 |
 
 
+---
 
 ## 3. High Availability (HA) Architecture
 
 The network was designed from the ground up for resilience and continuous operation.
-Layer 3 Redundancy: VRRP & OSPF
-Redundant Gateway: VRRP was configured to provide a virtual, fault-tolerant default gateway for all VLANs. R1 serves as the Master router, with R2 acting as a Backup, ready to take over instantly if the primary fails.
-Dynamic Routing: OSPF was deployed as the Interior Gateway Protocol (IGP). This ensures intelligent, dynamic path selection and rapid convergence, automatically rerouting traffic if a link or router goes down.
-Layer 2 Stability: LACP & RSTP
-Link Aggregation: LACP EtherChannel was used to bundle multiple physical links between switches. This increases total bandwidth and provides link redundancy.
-Loop Prevention: RSTP (Rapid Spanning Tree Protocol) was enabled on all switches to prevent catastrophic Layer 2 loops while ensuring sub-second convergence times.
+
+- Layer 3 Redundancy: VRRP & OSPF
+- Redundant Gateway: VRRP was configured to provide a virtual, fault-tolerant default gateway for all VLANs. R1 serves as the Master router, with R2 acting as a Backup, ready to take over instantly if the primary fails.
+-  Dynamic Routing: OSPF was deployed as the Interior Gateway Protocol (IGP). This ensures intelligent, dynamic path selection and rapid convergence, automatically rerouting traffic if a link or router goes down.
+- Layer 2 Stability: LACP & RSTP
+- Link Aggregation: LACP EtherChannel was used to bundle multiple physical links between switches. This increases total bandwidth and provides link redundancy.
+- Loop Prevention: RSTP (Rapid Spanning Tree Protocol) was enabled on all switches to prevent catastrophic Layer 2 loops while ensuring sub-second convergence times.
+
+---
 
 ## 4. Centralized Services on Ubuntu Server
 An Ubuntu Server 20.04 was integrated into the network (VLAN 10) to centralize and manage core services.
-Centralized DHCP: An ISC-DHCP-Server was installed to manage IP address allocation for all client VLANs. Router interfaces were configured as DHCP Relay Agents (ip helper-address) to forward client requests to the server.
-Time Synchronization (NTP): The server was configured as a master NTP server using Chrony. All network devices synchronize their clocks with this server, ensuring accurate timestamps in logs.
-Secure Management: SSH v2 was enforced for all device management, using 2048-bit RSA keys to encrypt administrative sessions.
+
+- Centralized DHCP: An ISC-DHCP-Server was installed to manage IP address allocation for all client VLANs. Router interfaces were configured as DHCP Relay Agents (ip helper-address) to forward client requests to the server.
+- Time Synchronization (NTP): The server was configured as a master NTP server using Chrony. All network devices synchronize their clocks with this server, ensuring accurate timestamps in logs.
+- Secure Management: SSH v2 was enforced for all device management, using 2048-bit RSA keys to encrypt administrative sessions.
+
+---
 
 ## 5. Verification and Documentation
 This section provides screenshots that validate the configuration and functionality of the network.
@@ -135,11 +144,11 @@ Detailed packet-level inspection to confirm protocol compliance and health.
 
 
 ## 6. Skills Demonstrated
-Advanced Routing & Redundancy: OSPF, VRRP, LACP EtherChannel, RSTP.
-Network Services Integration: DHCP Relay, NTP, and NAT-on-a-Stick.
-Linux System Administration: Ubuntu Server, ISC-DHCP-Server, Chrony.
-Network Security & Hardening: Secure management with SSH, VLAN segmentation.
-Protocol Analysis: Packet analysis with Wireshark and verification using Cisco IOS commands.
+- Advanced Routing & Redundancy: OSPF, VRRP, LACP EtherChannel, RSTP.
+- Network Services Integration: DHCP Relay, NTP, and NAT-on-a-Stick.
+- Linux System Administration: Ubuntu Server, ISC-DHCP-Server, Chrony.
+- Network Security & Hardening: Secure management with SSH, VLAN segmentation.
+- Protocol Analysis: Packet analysis with Wireshark and verification using Cisco IOS commands.
 
 ## 7. Technologies Used
 Simulation Environment: GNS3 (v2.2.56.1)
