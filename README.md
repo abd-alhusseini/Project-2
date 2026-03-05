@@ -99,7 +99,7 @@ This sub-section validates the failover mechanism between the Master and Backup 
 
   - Live Redundancy Test (Video): A screen recording demonstrating zero-downtime (or minimal packet loss) during a gateway failure.
 
-[▶ Watch the Live VRRP Failover Demo](https://abd-alhusseini.github.io/Project-2/demo.html)
+[▶ Watch the Live VRRP Failover Demo](https://abd-alhusseini.github.io/Project-2/demo.html) 
 
 ### 5.3 Core Services (DHCP & NTP)
 Centralized services hosted on the Ubuntu Server (VLAN 10) and managed across the infrastructure.
